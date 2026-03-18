@@ -58,6 +58,13 @@ class RootPdfToolsComponent @AssistedInject internal constructor(
                 is Screen.PdfTools.OCR -> screen.copy(uri = tempSelectionUri)
                 is Screen.PdfTools.ZipConvert -> screen.copy(uri = tempSelectionUri)
                 is Screen.PdfTools.Preview -> screen.copy(uri = tempSelectionUri)
+                is Screen.PdfTools.SummaryAi -> screen.copy(uri = tempSelectionUri)
+                is Screen.PdfTools.ChatAi -> screen.copy(uri = tempSelectionUri)
+                is Screen.PdfTools.KeyPointsAi -> screen.copy(uri = tempSelectionUri)
+                is Screen.PdfTools.StudyNotesAi -> screen.copy(uri = tempSelectionUri)
+                is Screen.PdfTools.ChapterSummaryAi -> screen.copy(uri = tempSelectionUri)
+                is Screen.PdfTools.ExplainPageAi -> screen.copy(uri = tempSelectionUri)
+                is Screen.PdfTools.ClassifyAi -> screen.copy(uri = tempSelectionUri)
                 else -> screen
             }
         )

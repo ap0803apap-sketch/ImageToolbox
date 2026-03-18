@@ -113,6 +113,13 @@ internal fun List<Uri>.screenList(
                     Screen.PdfTools.ExtractImages(uris.firstOrNull()),
                     Screen.PdfTools.OCR(uris.firstOrNull()),
                     Screen.PdfTools.ZipConvert(uris.firstOrNull()),
+                    Screen.PdfTools.SummaryAi(uris.firstOrNull()),
+                    Screen.PdfTools.ChatAi(uris.firstOrNull()),
+                    Screen.PdfTools.KeyPointsAi(uris.firstOrNull()),
+                    Screen.PdfTools.StudyNotesAi(uris.firstOrNull()),
+                    Screen.PdfTools.ChapterSummaryAi(uris.firstOrNull()),
+                    Screen.PdfTools.ExplainPageAi(uris.firstOrNull()),
+                    Screen.PdfTools.ClassifyAi(uris.firstOrNull()),
                 )
             } else {
                 listOf(multiplePdf)

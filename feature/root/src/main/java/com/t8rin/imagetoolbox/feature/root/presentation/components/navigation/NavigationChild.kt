@@ -86,8 +86,6 @@ import com.t8rin.imagetoolbox.feature.palette_tools.presentation.PaletteToolsCon
 import com.t8rin.imagetoolbox.feature.palette_tools.presentation.screenLogic.PaletteToolsComponent
 import com.t8rin.imagetoolbox.feature.pdf_tools.presentation.compress.CompressPdfToolContent
 import com.t8rin.imagetoolbox.feature.pdf_tools.presentation.compress.screenLogic.CompressPdfToolComponent
-import com.t8rin.imagetoolbox.feature.pdf_tools.presentation.ai_tools.AiPdfToolContent
-import com.t8rin.imagetoolbox.feature.pdf_tools.presentation.ai_tools.screenLogic.AiPdfToolComponent
 import com.t8rin.imagetoolbox.feature.pdf_tools.presentation.crop.CropPdfToolContent
 import com.t8rin.imagetoolbox.feature.pdf_tools.presentation.crop.screenLogic.CropPdfToolComponent
 import com.t8rin.imagetoolbox.feature.pdf_tools.presentation.extract_images.ExtractImagesPdfToolContent
@@ -302,11 +300,6 @@ internal sealed interface NavigationChild {
     class RootPdfTools(private val component: RootPdfToolsComponent) : NavigationChild {
         @Composable
         override fun Content() = RootPdfToolsContent(component)
-    }
-
-    class AiPdfTool(private val component: AiPdfToolComponent) : NavigationChild {
-        @Composable
-        override fun Content() = AiPdfToolContent(component)
     }
 
     class PickColorFromImage(private val component: PickColorFromImageComponent) : NavigationChild {

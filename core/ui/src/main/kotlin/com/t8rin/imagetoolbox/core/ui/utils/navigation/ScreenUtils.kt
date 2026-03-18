@@ -20,34 +20,20 @@ package com.t8rin.imagetoolbox.core.ui.utils.navigation
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Album
 import androidx.compose.material.icons.outlined.AutoFixHigh
-import androidx.compose.material.icons.outlined.Category
-import androidx.compose.material.icons.outlined.Chat
 import androidx.compose.material.icons.outlined.ColorLens
 import androidx.compose.material.icons.outlined.FilterBAndW
 import androidx.compose.material.icons.outlined.FolderZip
-import androidx.compose.material.icons.outlined.FormatListBulleted
 import androidx.compose.material.icons.outlined.GifBox
 import androidx.compose.material.icons.outlined.Gradient
-import androidx.compose.material.icons.outlined.LiveHelp
-import androidx.compose.material.icons.outlined.MenuBook
-import androidx.compose.material.icons.outlined.School
-import androidx.compose.material.icons.outlined.Summarize
 import androidx.compose.material.icons.rounded.Tag
 import androidx.compose.material.icons.twotone.Album
 import androidx.compose.material.icons.twotone.AutoFixHigh
-import androidx.compose.material.icons.twotone.Category
-import androidx.compose.material.icons.twotone.Chat
 import androidx.compose.material.icons.twotone.ColorLens
 import androidx.compose.material.icons.twotone.FilterBAndW
 import androidx.compose.material.icons.twotone.FolderZip
-import androidx.compose.material.icons.twotone.FormatListBulleted
 import androidx.compose.material.icons.twotone.GifBox
 import androidx.compose.material.icons.twotone.Gradient
-import androidx.compose.material.icons.twotone.LiveHelp
-import androidx.compose.material.icons.twotone.MenuBook
 import androidx.compose.material.icons.twotone.Preview
-import androidx.compose.material.icons.twotone.School
-import androidx.compose.material.icons.twotone.Summarize
 import androidx.compose.material.icons.twotone.Tag
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.core.net.toUri
@@ -247,13 +233,6 @@ internal fun Screen.simpleName(): String = when (this) {
     is PdfTools.Preview -> "PdfTools_Preview"
     is PdfTools.ImagesToPdf -> "PdfTools_ImagesToPdf"
     is PdfTools.ExtractPages -> "PdfTools_ExtractPages"
-    is PdfTools.SummaryAi -> "PdfTools_SummaryAi"
-    is PdfTools.ChatAi -> "PdfTools_ChatAi"
-    is PdfTools.KeyPointsAi -> "PdfTools_KeyPointsAi"
-    is PdfTools.StudyNotesAi -> "PdfTools_StudyNotesAi"
-    is PdfTools.ChapterSummaryAi -> "PdfTools_ChapterSummaryAi"
-    is PdfTools.ExplainPageAi -> "PdfTools_ExplainPageAi"
-    is PdfTools.ClassifyAi -> "PdfTools_ClassifyAi"
 }
 
 internal fun Screen.icon(): ImageVector? = when (this) {
@@ -331,13 +310,6 @@ internal fun Screen.icon(): ImageVector? = when (this) {
     is PdfTools.Preview -> Icons.Outlined.Preview
     is PdfTools.ImagesToPdf -> Icons.Outlined.Scanner
     is PdfTools.ExtractPages -> Icons.Outlined.ArtTrack
-    is PdfTools.SummaryAi -> Icons.Outlined.Summarize
-    is PdfTools.ChatAi -> Icons.Outlined.Chat
-    is PdfTools.KeyPointsAi -> Icons.Outlined.FormatListBulleted
-    is PdfTools.StudyNotesAi -> Icons.Outlined.School
-    is PdfTools.ChapterSummaryAi -> Icons.Outlined.MenuBook
-    is PdfTools.ExplainPageAi -> Icons.Outlined.LiveHelp
-    is PdfTools.ClassifyAi -> Icons.Outlined.Category
 }
 
 internal fun Screen.twoToneIcon(): ImageVector? = when (this) {
@@ -415,13 +387,6 @@ internal fun Screen.twoToneIcon(): ImageVector? = when (this) {
     is PdfTools.Preview -> Icons.TwoTone.Preview
     is PdfTools.ImagesToPdf -> Icons.TwoTone.Scanner
     is PdfTools.ExtractPages -> Icons.TwoTone.ArtTrack
-    is PdfTools.SummaryAi -> Icons.TwoTone.Summarize
-    is PdfTools.ChatAi -> Icons.TwoTone.Chat
-    is PdfTools.KeyPointsAi -> Icons.TwoTone.FormatListBulleted
-    is PdfTools.StudyNotesAi -> Icons.TwoTone.School
-    is PdfTools.ChapterSummaryAi -> Icons.TwoTone.MenuBook
-    is PdfTools.ExplainPageAi -> Icons.TwoTone.LiveHelp
-    is PdfTools.ClassifyAi -> Icons.TwoTone.Category
 }
 
 internal object UriSerializer : KSerializer<AndroidUri> {

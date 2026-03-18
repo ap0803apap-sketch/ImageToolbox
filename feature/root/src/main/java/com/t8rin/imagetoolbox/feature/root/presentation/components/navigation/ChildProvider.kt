@@ -53,7 +53,6 @@ import com.t8rin.imagetoolbox.feature.markup_layers.presentation.screenLogic.Mar
 import com.t8rin.imagetoolbox.feature.mesh_gradients.presentation.screenLogic.MeshGradientsComponent
 import com.t8rin.imagetoolbox.feature.palette_tools.presentation.screenLogic.PaletteToolsComponent
 import com.t8rin.imagetoolbox.feature.pdf_tools.presentation.compress.screenLogic.CompressPdfToolComponent
-import com.t8rin.imagetoolbox.feature.pdf_tools.presentation.ai_tools.screenLogic.AiPdfToolComponent
 import com.t8rin.imagetoolbox.feature.pdf_tools.presentation.crop.screenLogic.CropPdfToolComponent
 import com.t8rin.imagetoolbox.feature.pdf_tools.presentation.extract_images.screenLogic.ExtractImagesPdfToolComponent
 import com.t8rin.imagetoolbox.feature.pdf_tools.presentation.extract_pages.screenLogic.ExtractPagesPdfToolComponent
@@ -81,7 +80,6 @@ import com.t8rin.imagetoolbox.feature.pick_color.presentation.screenLogic.PickCo
 import com.t8rin.imagetoolbox.feature.recognize.text.presentation.screenLogic.RecognizeTextComponent
 import com.t8rin.imagetoolbox.feature.resize_convert.presentation.screenLogic.ResizeAndConvertComponent
 import com.t8rin.imagetoolbox.feature.root.presentation.components.navigation.NavigationChild.AiTools
-import com.t8rin.imagetoolbox.feature.root.presentation.components.navigation.NavigationChild.AiPdfTool
 import com.t8rin.imagetoolbox.feature.root.presentation.components.navigation.NavigationChild.ApngTools
 import com.t8rin.imagetoolbox.feature.root.presentation.components.navigation.NavigationChild.AsciiArt
 import com.t8rin.imagetoolbox.feature.root.presentation.components.navigation.NavigationChild.AudioCoverExtractor
@@ -194,7 +192,6 @@ internal class ChildProvider @Inject constructor(
     private val loadNetImageComponentFactory: LoadNetImageComponent.Factory,
     private val noiseGenerationComponentFactory: NoiseGenerationComponent.Factory,
     private val rootPdfToolsComponentFactory: RootPdfToolsComponent.Factory,
-    private val aiPdfToolComponentFactory: AiPdfToolComponent.Factory,
     private val pickColorFromImageComponentFactory: PickColorFromImageComponent.Factory,
     private val recognizeTextComponentFactory: RecognizeTextComponent.Factory,
     private val resizeAndConvertComponentFactory: ResizeAndConvertComponent.Factory,
@@ -890,69 +887,6 @@ internal class ChildProvider @Inject constructor(
                 componentContext = componentContext,
                 onGoBack = ::navigateBack,
                 onNavigate = ::replaceTo
-            )
-        )
-
-        is Screen.PdfTools.SummaryAi -> AiPdfTool(
-            aiPdfToolComponentFactory(
-                type = AiPdfToolComponent.Type.Summary,
-                initialUri = config.uri,
-                componentContext = componentContext,
-                onGoBack = ::navigateBack
-            )
-        )
-
-        is Screen.PdfTools.ChatAi -> AiPdfTool(
-            aiPdfToolComponentFactory(
-                type = AiPdfToolComponent.Type.Chat,
-                initialUri = config.uri,
-                componentContext = componentContext,
-                onGoBack = ::navigateBack
-            )
-        )
-
-        is Screen.PdfTools.KeyPointsAi -> AiPdfTool(
-            aiPdfToolComponentFactory(
-                type = AiPdfToolComponent.Type.KeyPoints,
-                initialUri = config.uri,
-                componentContext = componentContext,
-                onGoBack = ::navigateBack
-            )
-        )
-
-        is Screen.PdfTools.StudyNotesAi -> AiPdfTool(
-            aiPdfToolComponentFactory(
-                type = AiPdfToolComponent.Type.StudyNotes,
-                initialUri = config.uri,
-                componentContext = componentContext,
-                onGoBack = ::navigateBack
-            )
-        )
-
-        is Screen.PdfTools.ChapterSummaryAi -> AiPdfTool(
-            aiPdfToolComponentFactory(
-                type = AiPdfToolComponent.Type.ChapterSummary,
-                initialUri = config.uri,
-                componentContext = componentContext,
-                onGoBack = ::navigateBack
-            )
-        )
-
-        is Screen.PdfTools.ExplainPageAi -> AiPdfTool(
-            aiPdfToolComponentFactory(
-                type = AiPdfToolComponent.Type.ExplainPage,
-                initialUri = config.uri,
-                componentContext = componentContext,
-                onGoBack = ::navigateBack
-            )
-        )
-
-        is Screen.PdfTools.ClassifyAi -> AiPdfTool(
-            aiPdfToolComponentFactory(
-                type = AiPdfToolComponent.Type.Classify,
-                initialUri = config.uri,
-                componentContext = componentContext,
-                onGoBack = ::navigateBack
             )
         )
 

@@ -311,6 +311,13 @@ sealed class Screen(
                 ExtractImages(),
                 OCR(),
                 ZipConvert(),
+                SummaryAi(),
+                ChatAi(),
+                KeyPointsAi(),
+                StudyNotesAi(),
+                ChapterSummaryAi(),
+                ExplainPageAi(),
+                ClassifyAi(),
             )
         }
 
@@ -519,6 +526,69 @@ sealed class Screen(
             id = 66,
             title = R.string.pdf_to_images,
             subtitle = R.string.pdf_to_images_sub
+        )
+
+        @Serializable
+        data class SummaryAi(
+            val uri: Uri? = null
+        ) : Screen(
+            id = 81,
+            title = R.string.pdf_ai_summary,
+            subtitle = R.string.pdf_ai_summary_sub
+        )
+
+        @Serializable
+        data class ChatAi(
+            val uri: Uri? = null
+        ) : Screen(
+            id = 82,
+            title = R.string.pdf_ai_chat,
+            subtitle = R.string.pdf_ai_chat_sub
+        )
+
+        @Serializable
+        data class KeyPointsAi(
+            val uri: Uri? = null
+        ) : Screen(
+            id = 83,
+            title = R.string.pdf_ai_key_points,
+            subtitle = R.string.pdf_ai_key_points_sub
+        )
+
+        @Serializable
+        data class StudyNotesAi(
+            val uri: Uri? = null
+        ) : Screen(
+            id = 84,
+            title = R.string.pdf_ai_study_notes,
+            subtitle = R.string.pdf_ai_study_notes_sub
+        )
+
+        @Serializable
+        data class ChapterSummaryAi(
+            val uri: Uri? = null
+        ) : Screen(
+            id = 85,
+            title = R.string.pdf_ai_chapter_summary,
+            subtitle = R.string.pdf_ai_chapter_summary_sub
+        )
+
+        @Serializable
+        data class ExplainPageAi(
+            val uri: Uri? = null
+        ) : Screen(
+            id = 86,
+            title = R.string.pdf_ai_explain_page,
+            subtitle = R.string.pdf_ai_explain_page_sub
+        )
+
+        @Serializable
+        data class ClassifyAi(
+            val uri: Uri? = null
+        ) : Screen(
+            id = 87,
+            title = R.string.pdf_ai_classify,
+            subtitle = R.string.pdf_ai_classify_sub
         )
     }
 

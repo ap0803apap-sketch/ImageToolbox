@@ -44,7 +44,6 @@ import androidx.compose.foundation.lazy.grid.LazyHorizontalGrid
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.itemsIndexed
 import androidx.compose.foundation.lazy.grid.rememberLazyGridState
-import com.t8rin.imagetoolbox.core.resources.Icons
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -69,6 +68,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.net.toUri
 import com.t8rin.imagetoolbox.core.domain.image.model.ImageFrames
+import com.t8rin.imagetoolbox.core.resources.Icons
 import com.t8rin.imagetoolbox.core.resources.icons.BrokenImageAlt
 import com.t8rin.imagetoolbox.core.resources.icons.CheckCircle
 import com.t8rin.imagetoolbox.core.resources.icons.RadioButtonUnchecked
@@ -467,7 +467,7 @@ private fun ImageItem(
             if (isSelectionMode) {
                 if (selected) {
                     Icon(
-                        imageVector = Icons.Outlined.CheckCircle,
+                        imageVector = Icons.Rounded.CheckCircle,
                         tint = MaterialTheme.colorScheme.primary,
                         contentDescription = null,
                         modifier = Modifier
